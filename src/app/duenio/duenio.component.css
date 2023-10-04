@@ -1,3 +1,17 @@
-.custom-icon {
-    margin-right: 12px; /* Puedes ajustar el valor según la separación que desees */
+.offcanvas {
+  background-color: #0C0315;
+}
+.custom-navbar {
+    background-color: #48098A; /* Cambia #FF0000 al código de color deseado */
   }
+
+.custom-icon {
+    margin-right: 14px; 
+  }
+
+.custom-title{
+  color: #B5A3C8;
+}
+
+
+
