@@ -18,20 +18,21 @@ export class SalonesDuenioComponent {
 
 
   constructor(private route: ActivatedRoute, private duenioService:DuenioService, private dataTransportService:DataTransportService, private router:Router) {
-    
+
   }
 
   ngOnInit() {
     console.log("Iniciado");
-    const initialId = "12334"
+    const initialId = this.route.snapshot.parent.params['id'];
+    console.log("ID", this.route.snapshot.parent.params['id']);
     //this.router.navigate(['duenios', initialId,'/salones'])
     this.cargar(initialId);
     console.log("Duenio = ", this.duenio == null)
-    
+
   }
 
   cargar(initialId): void {
-    let idUsuario = "12334";
+    let idUsuario = initialId;
     if (idUsuario) {
       this.duenioService.getUsuario(idUsuario).subscribe(
         (due) => {
@@ -42,5 +43,5 @@ export class SalonesDuenioComponent {
       )
     }
   }
- 
+
 }

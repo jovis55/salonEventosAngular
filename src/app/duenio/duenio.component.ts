@@ -11,25 +11,25 @@ import { DataTransportService } from '../services/data-transport.service';
 })
 export class DuenioComponent {
   mostrarListaSalones = false;
-  
+
   duenio:Duenio;
-  
- 
+
+
 
   constructor(private route: ActivatedRoute,private duenioService:DuenioService, private dataTransportService:DataTransportService,private router:Router){}
 
   ngOnInit():void{
-   
+
     this.cargar();
 
 
   }
 
   cargar(): void {
-    const initialId = '12334'
+    const initialId = this.route.snapshot.paramMap.get('id');
     //this.router.navigate(['duenios', initialId])
     console.log(this.route.snapshot.paramMap.get('id'))
-    let idUsuario = "12334";
+    let idUsuario = initialId;
     if (idUsuario) {
       this.duenioService.getUsuario(idUsuario).subscribe(
         (due) => {
