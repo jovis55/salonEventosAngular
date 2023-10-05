@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { DuenioComponent } from './duenio/duenio.component';
 import { SalonesDuenioComponent } from './salones-duenio/salones-duenio.component';
 import { SalonEventoComponent } from './salon-evento/salon-evento.component';
+import { DataTransportService } from './services/data-transport.service';
 
 const routes:Routes=[
   { path: '', redirectTo: '/duenios', pathMatch: 'full' },
@@ -26,13 +27,15 @@ const routes:Routes=[
     DuenioComponent,
     SalonesDuenioComponent,
     SalonEventoComponent
+    
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [DataTransportService],
+  bootstrap: [AppComponent],
+  
 })
 export class AppModule { }

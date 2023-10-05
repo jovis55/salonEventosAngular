@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
-import { DuenioService } from './duenio.service';
-import { Duenio } from './duenio';
+import { Component,  Input, OnInit  } from '@angular/core';
+import { DuenioService } from '../services/duenio.service';
+import { Duenio } from '../models/duenio';
 import { Router } from '@angular/router';
+import { DataTransportService } from '../services/data-transport.service';
 
 @Component({
   selector: 'app-duenio',
@@ -11,23 +12,27 @@ import { Router } from '@angular/router';
 export class DuenioComponent {
   mostrarListaSalones = false;
   
-
-  duenio:Duenio = new Duenio();
+  duenio:Duenio;
+  
  
 
-  constructor(private duenioService:DuenioService){}
+  constructor(private duenioService:DuenioService, private dataTransportService:DataTransportService){}
 
   ngOnInit():void{
    
     this.cargar();
 
+
   }
 
-  cargar():void{
-    let idUsuario="12334";
-    if(idUsuario){
+  cargar(): void {
+    let idUsuario = "12334";
+    if (idUsuario) {
       this.duenioService.getUsuario(idUsuario).subscribe(
-          due =>this.duenio = due
+        (due) => {
+          this.duenio = due;
+          this.dataTransportService.setDuenio(this.duenio);
+        }
       )
     }
   }

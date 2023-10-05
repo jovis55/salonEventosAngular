@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import { Duenio } from './duenio';
+import { Duenio } from '../models/duenio';
 import {Observable} from 'rxjs';
 
 @Injectable({
@@ -15,4 +15,6 @@ export class DuenioService {
   getUsuario(idUsuario:string):Observable<Duenio>{
     return this.http.get<Duenio>(this.url+"/"+idUsuario);
   }
+
+  
 }

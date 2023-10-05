@@ -1,3 +1,5 @@
+import { Salones } from "./salones";
+
 export class Duenio {
     idUsuario : string;
     contraseña : string;
@@ -8,6 +10,7 @@ export class Duenio {
     biografia : string;
     fechaNacimiento : Date;
     direccion: string;
+    salonEventoList: Salones[];
 
     
 }
