@@ -1,0 +1,41 @@
+/* styles.css */
+
+.container {
+    margin-top: 70px;
+    margin-left: 100px;
+    background-color: #f0f0f0; /* Color de fondo para el contenedor principal */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrar elementos horizontalmente en el contenedor */
+}
+
+h1 {
+    font-size: 24px; /* Tamaño de fuente más grande para el título */
+    margin-left: 200px;
+}
+
+h2 {
+    font-size: 30px; /* Tamaño de fuente más grande para el título */
+   
+}
+
+.salon-grid {
+    display: flex;
+    flex-wrap: wrap; /* Para que los salones se muestren lado a lado */
+    gap: 20px; /* Espacio entre los salones */
+    justify-content: center; /* Centrar elementos horizontalmente en el grid */
+}
+
+.salon-item {
+    background-color: #C7B5DA; /* Color de fondo para cada salón */
+    padding: 20px;
+    border: 1px solid #ddd; /* Borde alrededor de cada salón */
+    width: calc(33.33% - 20px); /* Ancho de cada salón para que haya tres por fila */
+    box-sizing: border-box;
+}
+
+.salon-details {
+    font-size: 14px; /* Tamaño de fuente más pequeño para la información */
+    text-align: center; /* Centrar el texto dentro de cada div de detalles */
+}

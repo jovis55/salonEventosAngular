@@ -1,7 +1,7 @@
 import { Component,  Input, OnInit  } from '@angular/core';
 import { DuenioService } from '../services/duenio.service';
 import { Duenio } from '../models/duenio';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Route, Router } from '@angular/router';
 import { DataTransportService } from '../services/data-transport.service';
 
 @Component({
@@ -16,7 +16,7 @@ export class DuenioComponent {
   
  
 
-  constructor(private duenioService:DuenioService, private dataTransportService:DataTransportService){}
+  constructor(private route: ActivatedRoute,private duenioService:DuenioService, private dataTransportService:DataTransportService,private router:Router){}
 
   ngOnInit():void{
    
@@ -26,12 +26,14 @@ export class DuenioComponent {
   }
 
   cargar(): void {
+    const initialId = '12334'
+    //this.router.navigate(['duenios', initialId])
+    console.log(this.route.snapshot.paramMap.get('id'))
     let idUsuario = "12334";
     if (idUsuario) {
       this.duenioService.getUsuario(idUsuario).subscribe(
         (due) => {
           this.duenio = due;
-          this.dataTransportService.setDuenio(this.duenio);
         }
       )
     }

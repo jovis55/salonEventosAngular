@@ -12,13 +12,14 @@ import { DataTransportService } from './services/data-transport.service';
 const routes:Routes=[
   { path: '', redirectTo: '/duenios', pathMatch: 'full' },
   {
-    path: 'duenios', component: DuenioComponent,
+    path: 'duenios/:id', component: DuenioComponent,
     children: [
       { path: 'salones', component: SalonesDuenioComponent },
       // Otras rutas secundarias dentro de 'duenios' si las necesitas
     ],
   },
 
+  
   
 ]
 @NgModule({
@@ -32,8 +33,9 @@ const routes:Routes=[
   imports: [
     BrowserModule,
     HttpClientModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
   ],
+  exports: [RouterModule],
   providers: [DataTransportService],
   bootstrap: [AppComponent],
   
