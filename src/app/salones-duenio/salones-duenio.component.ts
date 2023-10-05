@@ -16,13 +16,26 @@ export class SalonesDuenioComponent {
   salones: Salones[];
   salon: Salones;
 
-  constructor(private route: ActivatedRoute, private dataTransportService:DataTransportService) {
-    
+  constructor(private route: ActivatedRoute, private dataTransportService:DataTransportService, private duenioService:DuenioService) {
+
   }
 
   ngOnInit() {
-    this.duenio = this.dataTransportService.getDuenio();
-    this.salon = this.duenio.salonEventoList[0];
+    // this.duenio = this.dataTransportService.getDuenio();
+    this.cargar();
+    // this.salon = this.duenio.salonEventoList[0];
   }
- 
+
+  cargar(): void {
+    let idUsuario = "12334";
+    if (idUsuario) {
+      this.duenioService.getUsuario(idUsuario).subscribe(
+        (due) => {
+          this.duenio = due;
+          this.salon = due.salonEventoList[0];
+        }
+      )
+    }
+  }
+
 }

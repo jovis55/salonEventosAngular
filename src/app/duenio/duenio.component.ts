@@ -11,18 +11,15 @@ import { DataTransportService } from '../services/data-transport.service';
 })
 export class DuenioComponent {
   mostrarListaSalones = false;
-  
+
   duenio:Duenio;
-  
- 
+
+
 
   constructor(private duenioService:DuenioService, private dataTransportService:DataTransportService){}
 
   ngOnInit():void{
-   
     this.cargar();
-
-
   }
 
   cargar(): void {
