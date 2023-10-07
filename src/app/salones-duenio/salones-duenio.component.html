@@ -5,20 +5,24 @@
   <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Lista de Salones de Eventos</title>
+
+      <title>SALONES</title>
+      
       
   </head>
   <body>
       <!-- Resto de tu contenido HTML -->
-      <div class="container" style="margin-top: 70px; margin-left: 30px;">
+      <div class="container" style="margin-top: 70px; margin-left: 20px;">
+
     <div >
-      <h1 style="margin-right: 200px;">Lista de Salones de Eventos</h1>
+      <div class="div-title"><h1 style="margin-left: 300px;" class="tit-salones">TUS SALONES</h1></div>
+      <button type="button" class="btn-agregar" (click)="navegarASalonesForm()">AGREGAR SALON</button>
       <div class="salon-grid">
         <div class="salon-item" *ngFor="let salon of salones">
           <div class="salon-details">
-            <h2> {{ salon.nombre }}</h2>
-            <p>Dirección: {{ salon.ubicacion }}</p>
-            <p>Capacidad: {{ salon.capacidad }}</p>
+            <div class="foto">Foto</div>
+            <h2 class="nombre-salon"> {{ salon.nombre }}</h2>
+            
             <!-- Agrega más detalles del salón aquí si es necesario -->
           </div>
         </div>

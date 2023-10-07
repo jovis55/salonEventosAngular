@@ -13,7 +13,6 @@ import { DataTransportService } from '../services/data-transport.service';
 })
 export class SalonesDuenioComponent {
   duenio: Duenio;
-  duenioCopia: Duenio;
   salones: Salones[];
 
 
@@ -25,10 +24,12 @@ export class SalonesDuenioComponent {
     console.log("Iniciado");
     const initialId = this.route.snapshot.parent.params['id'];
     console.log("ID", this.route.snapshot.parent.params['id']);
-    //this.router.navigate(['duenios', initialId,'/salones'])
     this.cargar(initialId);
     console.log("Duenio = ", this.duenio == null)
 
+  }
+  navegarASalonesForm() {
+    this.router.navigate(['duenios','12334','salones', 'form']);
   }
 
   cargar(initialId): void {

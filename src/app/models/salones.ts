@@ -1,3 +1,5 @@
+import { Duenio } from "./duenio";
+
 export class Salones {
     
 
@@ -6,5 +8,6 @@ export class Salones {
     capacidad: string;
     ubicacion : string;
     servicioIncluido : string;
+    duenio:Duenio;
   
 }

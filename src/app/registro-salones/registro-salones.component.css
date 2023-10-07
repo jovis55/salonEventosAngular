@@ -1,0 +1,26 @@
+.form{
+    margin-top: 10px;
+    
+}
+.contenedor{
+    margin-top: 70px;
+    display: flex;
+    justify-content: center; /* Centra horizontalmente el contenido */
+    align-items: center;
+    background-color: #c49dee; /* Color de fondo para cada salón */
+    border: 1px solid #d8bef1; /* Ancho, estilo y color del borde */
+    box-shadow: 0px 0px 20px rgba(171, 0, 238, 0.5); /* Sombra */
+    border-radius: 10px; /* Bordes redondeados */
+}
+h4{
+    text-align: center;
+}
+.boton-agregar{
+    margin-bottom: 20px;
+}
+.mb-3{
+    width: 600px;
+}
+.input-largo{
+    height: 100px;
+}
