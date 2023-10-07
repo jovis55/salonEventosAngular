@@ -6,7 +6,6 @@ import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { DuenioComponent } from './duenio/duenio.component';
 import { SalonesDuenioComponent } from './salones-duenio/salones-duenio.component';
-import { SalonEventoComponent } from './salon-evento/salon-evento.component';
 import { DataTransportService } from './services/data-transport.service';
 
 const routes:Routes=[
@@ -27,7 +26,7 @@ const routes:Routes=[
     AppComponent,
     DuenioComponent,
     SalonesDuenioComponent,
-    SalonEventoComponent
+  
     
   ],
   imports: [
