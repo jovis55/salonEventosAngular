@@ -13,10 +13,10 @@ export class SalonesService {
 
   createSalon(salon:Salones):Observable<Salones>{
     return this.http.post<Salones>(this.url, salon);
-
-
   }
-
+  getSalon(idSalon:string):Observable<Salones>{
+    return this.http.get<Salones>(this.url+"/"+idSalon);
+  }
 
  
 

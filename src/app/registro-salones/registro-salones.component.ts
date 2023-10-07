@@ -24,21 +24,35 @@ export class RegistroSalonesComponent {
 
   }
   
-  create(): void{
-    console.log(this.salon)
-    
-    if (this.duenio) {
-    this.salon.duenio=this.duenio;
-    this.salonesService.createSalon(this.salon).subscribe(
-      (salonCreado) =>{
-        console.log(salonCreado);
-        this.router.navigate(['duenios','12334','salones']);
+  create(): void {
+    console.log(this.salon);
   
-
-      });
+    if (!this.duenio) {
+      console.error("No se proporcionó un dueño válido.");
+      alert('Error: No se proporcionó un dueño válido.');
+      return; // Salir del método si no hay un dueño válido
+    }
+  
+    // Verificar si el salón ya existe
+    if (this.salonesService.getSalon(this.salon.nombre)) {
+      console.log("El salón ya existe");
+      alert('Este salón ya está registrado.');
+      this.router.navigate(['duenios', '12334', 'salones']);
+    } else {
+      console.log("El salón no existe");
+      this.salon.duenio = this.duenio;
+      this.salonesService.createSalon(this.salon).subscribe(
+        (salonCreado) => {
+          console.log(salonCreado);
+          this.router.navigate(['duenios', '12334', 'salones']);
+        },
+        (error) => {
+          console.error("Error al crear el salón:", error);
+          alert('Hubo un error al crear el salón. Por favor, inténtalo de nuevo más tarde.');
+        }
+      );
     }
   }
-
   cargar(initialId): void {
     let idUsuario = initialId;
     console.log("este es el id registro", initialId);
