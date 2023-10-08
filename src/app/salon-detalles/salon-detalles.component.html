@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles del Salón</title>
+</head>
+<body>
+    <h1>Detalles del Salón</h1>
+    <table>
+        <tr>
+            <td>ID del Salón:</td>
+            <td>{{salon.idSalon }}</td>
+        </tr>
+        <tr>
+            <td>Nombre:</td>
+            <td>{{salon.nombre }}</td>
+        </tr>
+        <tr>
+            <th>Foto del Salón:</th>
+            <td>
+                <div class="imagen-salon">
+                    Foto
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>Capacidad:</td>
+            <td>{{ salon.capacidad }}</td>
+        </tr>
+        <tr>
+            <td>Ubicación:</td>
+            <td>{{ salon.ubicacion }}</td>
+        </tr>
+        <tr>
+            <td>Servicio Incluido:</td>
+            <td>{{ salon.servicioIncluido }}</td>
+        </tr>
+        <tr>
+            <td>Dueño:</td>
+            <td>{{ salon.duenio.nombre}}</td>
+        </tr>
+        <tr>
+            <td>Tel Dueño:</td>
+            <td>{{ salon.duenio.telefono}}</td>
+        </tr>
+        <tr>
+            <td>Email Dueño:</td>
+            <td>{{ salon.duenio.email}}</td>
+        </tr>
+    </table>
+</body>
+</html>
+

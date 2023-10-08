@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <title>SALONES</title>
+      
+      
+  </head>
+  <body>
+      <!-- Resto de tu contenido HTML -->
+    <div class="container" style="margin-top: 70px; margin-left: 20px;">
+
+    <div >
+      <div class="div-title"><h1 class="tit-salones">SALONES DISPONIBLES</h1></div>
+      <div class="salon-grid">
+        <div class="salon-item" *ngFor="let salon of salones">
+          <div class="salon-details">
+            <div class="foto">Foto</div>
+     
+            <h2 class="nombre-salon"> {{ salon.nombre }}</h2>
+            <h3 class="ubicacion"> {{ salon.ubicacion }}</h3>
+            <a [routerLink]="[salon.idSalon]">Ver detalles</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </body>
+  </html>
+  

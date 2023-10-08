@@ -2,7 +2,7 @@ import { Component,  Input, OnInit  } from '@angular/core';
 import { DuenioService } from '../services/duenio.service';
 import { Duenio } from '../models/duenio';
 import { ActivatedRoute, Route, Router } from '@angular/router';
-import { DataTransportService } from '../services/data-transport.service';
+
 
 @Component({
   selector: 'app-duenio',
@@ -10,13 +10,13 @@ import { DataTransportService } from '../services/data-transport.service';
   styleUrls: ['./duenio.component.css']
 })
 export class DuenioComponent {
-  mostrarListaSalones = false;
+
 
   duenio:Duenio;
 
 
 
-  constructor(private route: ActivatedRoute,private duenioService:DuenioService, private dataTransportService:DataTransportService,private router:Router){}
+  constructor(private route: ActivatedRoute,private duenioService:DuenioService,private router:Router){}
 
   ngOnInit():void{
 

@@ -4,7 +4,7 @@ import { DuenioService } from '../services/duenio.service';
 import { Salones } from '../models/salones';
 import { Duenio } from '../models/duenio';
 import { ActivatedRoute, Route, Router } from '@angular/router';
-import { DataTransportService } from '../services/data-transport.service';
+
 
 @Component({
   selector: 'app-salones-duenio',
@@ -16,7 +16,7 @@ export class SalonesDuenioComponent {
   salones: Salones[];
 
 
-  constructor(private route: ActivatedRoute, private duenioService:DuenioService, private dataTransportService:DataTransportService, private router:Router) {
+  constructor(private route: ActivatedRoute, private duenioService:DuenioService, private router:Router) {
 
   }
 
