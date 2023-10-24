@@ -1,0 +1,53 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+    text-shadow: 3px 2px 3px rgb(162, 115, 29); /* Sombra con desplazamiento (2px, 2px) y color rgba */
+}
+
+table {
+    width: 80%;
+    margin-top: 20px;
+    margin:  auto;
+    border-collapse: collapse;
+    box-shadow: 0 0 30px rgb(255, 236, 67);
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(odd) {
+    background-color: #f8f8f8;
+}
+
+tr:nth-child(even) {
+    background-color: #e8e8e8;
+}
+.imagen-salon {
+    border: 3px solid #333; /* Borde de 3 píxeles sólido con color #333 */
+    border-radius: 5px;   /* Borde redondeado de 10 píxeles */
+    overflow: hidden;      /* Oculta el contenido fuera del borde */
+    width: 200px;          /* Ancho de la imagen */
+    height: 200px;    
+    text-align: center;     /* Altura de la imagen */
+}
+
+tr {
+    height: 40px; /* Altura de las filas (ajusta según tus necesidades) */
+}
+
+td:first-child {
+    font-weight: bold;
+}

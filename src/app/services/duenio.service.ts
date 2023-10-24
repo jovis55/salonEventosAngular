@@ -16,5 +16,6 @@ export class DuenioService {
     return this.http.get<Duenio>(this.url+"/"+idUsuario);
   }
 
+
   
 }

@@ -3,8 +3,8 @@ import { DuenioComponent } from '../duenio/duenio.component';
 import { DuenioService } from '../services/duenio.service';
 import { Salones } from '../models/salones';
 import { Duenio } from '../models/duenio';
-import { ActivatedRoute } from '@angular/router';
-import { DataTransportService } from '../services/data-transport.service';
+import { ActivatedRoute, Route, Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-salones-duenio',
@@ -14,15 +14,35 @@ import { DataTransportService } from '../services/data-transport.service';
 export class SalonesDuenioComponent {
   duenio: Duenio;
   salones: Salones[];
-  salon: Salones;
 
-  constructor(private route: ActivatedRoute, private dataTransportService:DataTransportService) {
-    
+
+  constructor(private route: ActivatedRoute, private duenioService:DuenioService, private router:Router) {
+
   }
 
   ngOnInit() {
-    this.duenio = this.dataTransportService.getDuenio();
-    this.salon = this.duenio.salonEventoList[0];
+    console.log("Iniciado");
+    const initialId = this.route.snapshot.parent.params['id'];
+    console.log("ID", this.route.snapshot.parent.params['id']);
+    this.cargar(initialId);
+    console.log("Duenio = ", this.duenio == null)
+
   }
- 
+  navegarASalonesForm() {
+    this.router.navigate(['duenios','12334','salones', 'form']);
+  }
+
+  cargar(initialId): void {
+    let idUsuario = initialId;
+    if (idUsuario) {
+      this.duenioService.getUsuario(idUsuario).subscribe(
+        (due) => {
+          console.log("Due =", due == null)
+          this.duenio = due;
+          this.salones = due.salonEventoList;
+        }
+      )
+    }
+  }
+
 }

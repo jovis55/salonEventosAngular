@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+</head>
+<body>
+    <div class="contenedor">
+    <form class="form">
+        <h4>AGREGA UN NUEVO SALON</h4>
+        <div class="mb-3">
+          <label for="nombre" class="form-label">Nombre del Salon</label>
+          <input type="text" class="form-control" name="nombre" [(ngModel)]="salon.nombre">
+        </div>
+        <div class="mb-3">
+            <label for="capacidad" class="form-label">Capacidad</label>
+            <input type="text" class="form-control" name="capacidad" [(ngModel)]="salon.capacidad">
+          </div>
+          <div class="mb-3">
+            <label for="ubicacion" class="form-label">ubicacion</label>
+            <input type="text" class="form-control" name="ubicacion" [(ngModel)]="salon.ubicacion">
+          </div>
+          <div class="mb-3">
+            <label for="servicioIncluido" class="form-label">Servicios incluidos</label>
+            <input type="text" class="form-control input-largo" name="servicioIncluido" [(ngModel)]="salon.servicioIncluido">
+          </div>
+        <button type="submit" class="btn btn-primary boton-agregar" (click)="create()">Submit</button>
+      </form>
+    </div>
+</body>
+</html>
