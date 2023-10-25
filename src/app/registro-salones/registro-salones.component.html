@@ -25,6 +25,11 @@
             <label for="servicioIncluido" class="form-label">Servicios incluidos</label>
             <input type="text" class="form-control input-largo" name="servicioIncluido" [(ngModel)]="salon.servicioIncluido">
           </div>
+          <div class="mb-3">
+            <label for="imagen" class="form-label">Agregar Foto</label>
+            <input type="file" class="form-control" name="imagen" (change)="onFileSelected($event)" accept="image/*">
+        </div>
+        
         <button type="submit" class="btn btn-primary boton-agregar" (click)="create()">Submit</button>
       </form>
     </div>

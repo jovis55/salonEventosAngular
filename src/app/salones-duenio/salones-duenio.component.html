@@ -7,6 +7,9 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
       <title>SALONES</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Boogaloo&display=swap" rel="stylesheet">
       
       
   </head>
@@ -15,18 +18,20 @@
       <div class="container" style="margin-top: 70px; margin-left: 20px;">
 
     <div >
-      <div class="div-title"><h1 style="margin-left: 300px;" class="tit-salones">TUS SALONES</h1></div>
+      <div class="div-title"><h1  class="tit-salones">TUS SALONES</h1></div>
       <button type="button" class="btn-agregar" (click)="navegarASalonesForm()">AGREGAR SALON</button>
       <div class="salon-grid">
         <div class="salon-item" *ngFor="let salon of salones">
           <div class="salon-details">
-            <div class="foto">Foto</div>
-            <h2 class="nombre-salon"> {{ salon.nombre }}</h2>
+            <div class="foto">
+              <img class="foto-img" [src]="salon.imagenUrl" alt="Foto del salón">
+            </div>
+             
             
-            <!-- Agrega más detalles del salón aquí si es necesario -->
-            <!-- Agrega más detalles del salón aquí si es necesario -->
           </div>
+          <h2 class="nombre-salon"> {{ salon.nombre }}</h2>
         </div>
+        
       </div>
     </div>
   </div>

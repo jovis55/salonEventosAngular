@@ -8,6 +8,7 @@ export class Salones {
     capacidad: string;
     ubicacion : string;
     servicioIncluido : string;
+    imagenUrl: string;
     duenio:Duenio;
   
 }

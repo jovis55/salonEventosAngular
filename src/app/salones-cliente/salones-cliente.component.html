@@ -17,7 +17,9 @@
       <div class="salon-grid">
         <div class="salon-item" *ngFor="let salon of salones">
           <div class="salon-details">
-            <div class="foto">Foto</div>
+            <div class="foto">
+              <img class="foto-img" [src]="salon.imagenUrl" alt="Foto del salón">
+            </div>
      
             <h2 class="nombre-salon"> {{ salon.nombre }}</h2>
             <h3 class="ubicacion"> {{ salon.ubicacion }}</h3>

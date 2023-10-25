@@ -13,7 +13,7 @@ import { SalonesClienteComponent } from './salones-cliente/salones-cliente.compo
 import { SalonDetallesComponent } from './salon-detalles/salon-detalles.component';
 
 //RUTAS PARA INGRESAR A LA VENTANA DE DUENIO Y SUS OPCIONES
- 
+/** 
 const routes:Routes=[
   { path: '', redirectTo: '/duenios', pathMatch: 'full' },
   {
@@ -25,8 +25,8 @@ const routes:Routes=[
     ],
   },
 ]
+*/
 
-/**
 const routes:Routes=[
   { path: '', redirectTo: '/clientes', pathMatch: 'full' },
   {
@@ -39,7 +39,7 @@ const routes:Routes=[
   },
 ]
 
-  */
+  
   
 
 @NgModule({
