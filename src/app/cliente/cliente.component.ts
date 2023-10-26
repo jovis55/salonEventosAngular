@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Cliente } from '../models/cliente';
 import { ClienteService } from '../services/cliente.service';
 import { ActivatedRoute, Route, Router } from '@angular/router';
+import 'bootstrap';
 
 @Component({
   selector: 'app-cliente',
@@ -34,7 +35,9 @@ export class ClienteComponent {
         )
       }
     }
-  
+    salir(){
+      this.router.navigate(['loginUsuario']);
+    }
   
   }
 

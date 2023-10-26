@@ -1,6 +1,6 @@
 export class Usuario {
     idUsuario : string;
-    contraseña : string;
+    contrasena : string;
     email: string;
     tipoUsuario : string;
   

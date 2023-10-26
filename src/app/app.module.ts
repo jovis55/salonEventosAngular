@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { Routes, RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 import { AppComponent } from './app.component';
 import { DuenioComponent } from './duenio/duenio.component';
@@ -12,6 +13,10 @@ import { ClienteComponent } from './cliente/cliente.component';
 import { SalonesClienteComponent } from './salones-cliente/salones-cliente.component';
 import { SalonDetallesComponent } from './salon-detalles/salon-detalles.component';
 import { UsuarioLoginComponent} from './usuario-login/usuario-login.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RegistroClienteComponent } from './registro-cliente/registro-cliente.component';
+import { RegistroDuenioComponent } from './registro-duenio/registro-duenio.component';
+import { TipoUsuarioComponent } from './tipo-usuario/tipo-usuario.component';
 
 //RUTAS PARA INGRESAR A LA VENTANA DE DUENIO Y SUS OPCIONES
 /** 
@@ -41,10 +46,26 @@ const routes:Routes=[
 */
 const routes:Routes=[
   { path: '', redirectTo: '/loginUsuario', pathMatch: 'full' },
+
   {
     path: 'loginUsuario', component: UsuarioLoginComponent,
     
+    
   },
+  {
+    path: 'rol', component: TipoUsuarioComponent,
+    
+    
+  },
+  {
+    path: 'registroDuenio', component: RegistroDuenioComponent,
+    
+  },
+  {
+    path: 'registroCliente', component: RegistroClienteComponent,
+    
+  },
+ 
   {
     path: 'clientes/:id', component: ClienteComponent,
     
@@ -80,6 +101,9 @@ const routes:Routes=[
     SalonesClienteComponent,
     SalonDetallesComponent,
     UsuarioLoginComponent,
+    RegistroClienteComponent,
+    RegistroDuenioComponent,
+    TipoUsuarioComponent,
   
   ],
   imports: [
@@ -87,6 +111,8 @@ const routes:Routes=[
     HttpClientModule,
     RouterModule.forRoot(routes),
     FormsModule,
+    MatSnackBarModule,
+    BrowserAnimationsModule,
   ],
   exports: [RouterModule],
   bootstrap: [AppComponent],

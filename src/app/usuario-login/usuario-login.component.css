@@ -66,3 +66,9 @@ a {
 a:hover {
     text-decoration: underline;
 }
+
+body{
+    
+    background: url('https://64.media.tumblr.com/6d15bfb8ea0102e96846046cf314ab70/tumblr_pvnwexJg3L1uzwgsuo1_400.gif') center center;
+    background-size: cover;
+}

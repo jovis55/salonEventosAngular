@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ActivatedRoute, Route, Router } from '@angular/router';
 import { LoginService } from '../services/login.service';
 import { Usuario } from '../models/usuario';
+import { MatSnackBar, MatSnackBarVerticalPosition } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-usuario-login',
@@ -14,7 +15,7 @@ export class UsuarioLoginComponent {
   usuario: Usuario;
 
 
-  constructor(private route: ActivatedRoute, private router:Router, private loginService: LoginService){}
+  constructor(private route: ActivatedRoute, private router:Router, private loginService: LoginService, private snackBar: MatSnackBar){}
 
   ngOnInit(): void{}
 
@@ -29,7 +30,8 @@ export class UsuarioLoginComponent {
 
         if (this.usuario) {
           // Se encontró un usuario, ahora verifica si las contraseñas coinciden.
-          if (this.usuario.contraseña === this.contrasena) {
+          console.log("hola",this.usuario.contrasena);
+          if (this.usuario.contrasena === this.contrasena) {
             switch (this.usuario.tipoUsuario) {
               case "DUENIO":
                 this.navegarADuenios(this.idUsuario);
@@ -54,9 +56,12 @@ export class UsuarioLoginComponent {
           } else {
             // Las contraseñas no coinciden, muestra un mensaje de error.
             console.log('Contraseña incorrecta. Por favor, verifica tus credenciales.');
+            this.mostrarMensajeError('Contraseña incorrecta. Por favor, verifica tus credenciales.');
           }
         } else {
           // No se encontró un usuario, muestra un mensaje de error.
+          this.mostrarMensajeError('Usuario no encontrado. Por favor, regístrate.');
+
           console.log('Usuario no encontrado. Por favor, regístrate.');
         }
       }
@@ -71,6 +76,13 @@ export class UsuarioLoginComponent {
   }
   navegarAAdmin(idUsuario: string) {
     this.router.navigate(['admin', idUsuario]);
+  }
+
+  mostrarMensajeError(mensaje: string) {
+    this.snackBar.open(mensaje, 'Cerrar', {
+      duration: 3000, // Duración del mensaje en milisegundos
+      verticalPosition: 'top' as MatSnackBarVerticalPosition, // Establece la posición en la parte superior
+    });
   }
 
 }

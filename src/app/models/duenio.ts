@@ -2,7 +2,7 @@ import { Salones } from "./salones";
 
 export class Duenio {
     idUsuario : string;
-    contraseña : string;
+    contrasena : string;
     email: string;
     tipoUsuario : string;
     nombre : string;

@@ -1,0 +1,46 @@
+<form>
+    <div>
+      <label for="idUsuario">ID de Usuario</label>
+      <input type="text" class="form-control" name="idUsuario" [(ngModel)]="duenio.idUsuario" required>
+    </div>
+  
+    <div>
+      <label for="contrasena">Contraseña</label>
+      <input type="password" class="form-control" name="contrasena" [(ngModel)]="duenio.contrasena" required>
+    </div>
+  
+    <div>
+      <label for="email">Email</label>
+      <input type="email" class="form-control" name="email" [(ngModel)]="duenio.email" required>
+    </div>
+  
+    <div>
+      <label for="nombre">Nombre</label>
+      <input type="text" class="form-control" name="nombre" [(ngModel)]="duenio.nombre" required>
+    </div>
+  
+    <div>
+      <label for="telefono">Teléfono</label>
+      <input type="text" class="form-control" name="telefono" [(ngModel)]="duenio.telefono">
+    </div>
+  
+    <div>
+      <label for="biografia">Biografía</label>
+      <textarea class="form-control" name="biografia" [(ngModel)]="duenio.biografia"></textarea>
+    </div>
+  
+    <div>
+      <label for="fechaNacimiento">Fecha de Nacimiento</label>
+      <input type="date" class="form-control" name="fechaNacimiento" [(ngModel)]="duenio.fechaNacimiento">
+    </div>
+  
+    <div>
+      <label for="direccion">Dirección</label>
+      <textarea class="form-control" name="direccion" [(ngModel)]="duenio.direccion"></textarea>
+    </div>
+  
+    <button type="submit" (click)="createCliente()">Registrar</button>
+
+    <button type="login" (click)="backLogin()">Login</button>
+  </form>
+  

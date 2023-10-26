@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iniciar Sesión</title>
 </head>
-<body>
+<body><div class="background">
     <div class="login-container">
         <h1>Iniciar Sesión</h1>
         <form>
@@ -19,9 +19,9 @@
             <button type="submit" (click)="create()">Ingresar</button>
         </form>
 
-        <p>No tienes cuenta? <a href="">Regístrate</a></p>
+        <p>No tienes cuenta? <a routerLink="/rol">Regístrate</a></p>
         <div><router-outlet></router-outlet></div>
     </div>
-    
+    </div>
 </body>
 </html>

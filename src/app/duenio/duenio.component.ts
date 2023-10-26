@@ -2,6 +2,8 @@ import { Component,  Input, OnInit  } from '@angular/core';
 import { DuenioService } from '../services/duenio.service';
 import { Duenio } from '../models/duenio';
 import { ActivatedRoute, Route, Router } from '@angular/router';
+import 'bootstrap';
+
 
 
 @Component({
@@ -24,6 +26,9 @@ export class DuenioComponent {
    
 
 
+  }
+  salir(){
+    this.router.navigate(['loginUsuario']);
   }
 
   cargar(): void {
