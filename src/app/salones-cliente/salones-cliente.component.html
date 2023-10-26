@@ -5,6 +5,15 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
       <title>SALONES</title>
+      <style>
+        .icon-eye {
+          font-size: 24px;
+          cursor: pointer;
+          margin-right: 10px;
+        }
+      </style>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
       
       
   </head>
@@ -23,7 +32,10 @@
      
             <h2 class="nombre-salon"> {{ salon.nombre }}</h2>
             <h3 class="ubicacion"> {{ salon.ubicacion }}</h3>
-            <a [routerLink]="[salon.idSalon]">Ver detalles</a>
+            <div><i class="fa-solid fa-eye fa-xl" style="color: #78123e;" (click)="navigateToDetails(salon.idSalon)"></i>
+</div>
+      
+            
           </div>
         </div>
       </div>

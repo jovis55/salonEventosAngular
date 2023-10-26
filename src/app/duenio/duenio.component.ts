@@ -19,13 +19,15 @@ export class DuenioComponent {
   constructor(private route: ActivatedRoute,private duenioService:DuenioService,private router:Router){}
 
   ngOnInit():void{
-
+ console.log("entro a clients");
     this.cargar();
+   
 
 
   }
 
   cargar(): void {
+    console.log("entro a clients 2");
     const initialId = this.route.snapshot.paramMap.get('id');
     //this.router.navigate(['duenios', initialId])
     console.log(this.route.snapshot.paramMap.get('id'))

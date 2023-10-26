@@ -11,6 +11,7 @@ import { RegistroSalonesComponent } from './registro-salones/registro-salones.co
 import { ClienteComponent } from './cliente/cliente.component';
 import { SalonesClienteComponent } from './salones-cliente/salones-cliente.component';
 import { SalonDetallesComponent } from './salon-detalles/salon-detalles.component';
+import { UsuarioLoginComponent} from './usuario-login/usuario-login.component';
 
 //RUTAS PARA INGRESAR A LA VENTANA DE DUENIO Y SUS OPCIONES
 /** 
@@ -25,7 +26,6 @@ const routes:Routes=[
     ],
   },
 ]
-*/
 
 const routes:Routes=[
   { path: '', redirectTo: '/clientes', pathMatch: 'full' },
@@ -38,6 +38,34 @@ const routes:Routes=[
     ],
   },
 ]
+*/
+const routes:Routes=[
+  { path: '', redirectTo: '/loginUsuario', pathMatch: 'full' },
+  {
+    path: 'loginUsuario', component: UsuarioLoginComponent,
+    
+  },
+  {
+    path: 'clientes/:id', component: ClienteComponent,
+    
+    children: [
+      { path: 'salones', component: SalonesClienteComponent },
+      { path: 'salones/:idSalon', component: SalonDetallesComponent },
+      // Otras rutas secundarias dentro de 'clientes' 
+    ],
+
+  },
+  {
+    path: 'duenios/:id', component: DuenioComponent,
+    children: [
+      { path: 'salones', component: SalonesDuenioComponent },
+      { path: 'salones/form', component: RegistroSalonesComponent },
+      // Otras rutas secundarias dentro de 'duenios' 
+    ],
+  }
+]
+
+
 
   
   
@@ -51,8 +79,8 @@ const routes:Routes=[
     ClienteComponent,
     SalonesClienteComponent,
     SalonDetallesComponent,
+    UsuarioLoginComponent,
   
-    
   ],
   imports: [
     BrowserModule,

@@ -10,6 +10,8 @@ import { ActivatedRoute, Route, Router } from '@angular/router';
 })
 export class SalonesClienteComponent {
   salones: Salones[];
+  idUsuario: number;
+ 
 
   constructor(private route: ActivatedRoute, private salonesService: SalonesService, private router:Router) {
   }
@@ -17,6 +19,7 @@ export class SalonesClienteComponent {
   ngOnInit(){
     const initialId = this.route.snapshot.parent.params['id'];
     this.cargar(initialId);
+    this.idUsuario = initialId;
 
   }
 cargar(initialId):void{
@@ -29,4 +32,9 @@ cargar(initialId):void{
     )
   }
 }
+
+navigateToDetails(idSalon: number) {
+  this.router.navigate(['clientes',this.idUsuario,'salones', idSalon]);
+}
+
 }
