@@ -1,3 +1,4 @@
+
 .offcanvas {
   background-color: #0C0315;
 }
@@ -12,6 +13,37 @@
 .custom-title{
   color: #B5A3C8;
 }
+/* Alinea el icono y el nombre del usuario a la izquierda */
+.navbar-brand {
+  font-size: 22px;
+  font-family: 'El Messiri', sans-serif;
+  margin-left: auto;
+}
+
+/* Espacio entre el icono y el nombre del usuario */
+.custom-icon {
+  margin-right: 10px;
+}
+
+/* Estilos para el menú desplegable */
+.btn-group {
+ 
+  margin-left: 10px;
+  margin-right: 20px; /* Añade margen a la izquierda para separarlo del nombre de usuario */
+}
+.puntos{
+  background-color: #21073d86;
+  border: 0px;
+}
+
+.titulo{
+  font-size: 30px;
+  font-family: 'El Messiri', sans-serif;
+}
+.opciones{
+  margin-right: -9px;
+}
+
 
 
 

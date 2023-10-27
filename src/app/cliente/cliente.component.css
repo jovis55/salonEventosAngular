@@ -12,5 +12,44 @@
   
   .custom-title{
     color: #B5A3C8;
+  }.navbar-brand {
+    font-size: 22px;
+    font-family: 'El Messiri', sans-serif;
+    margin-left: auto;
+  }
+  
+  /* Espacio entre el icono y el nombre del usuario */
+  .custom-icon {
+    margin-right: 10px;
+  }
+  
+  /* Estilos para el menú desplegable */
+  .btn-group {
+   
+    margin-left: 10px;
+    margin-right: 20px; /* Añade margen a la izquierda para separarlo del nombre de usuario */
+  }
+  .puntos{
+    background-color: #3d072586;
+    border: 0px;
+  }
+  
+  .titulo{
+    font-size: 30px;
+    font-family: 'El Messiri', sans-serif;
+  }
+  .opciones{
+    margin-right: -9px;
+  }
+
+  .logo{
+    margin-top: 16px;
+    margin-left: 10px;
+    font-family: 'El Messiri', sans-serif;
+  }
+  h1{
+    font-family: 'El Messiri', sans-serif;
+    font-size: 26px;
+    color: #ffffff;
   }
   

@@ -1,6 +1,6 @@
 .container {
     margin-top: 70px;
-    background-color: #fff9c3; /* Color de fondo para el contenedor principal */
+    background-color: #dbdad1; /* Color de fondo para el contenedor principal */
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -9,17 +9,21 @@
     width: auto;
 }
 .tit-salones{
-    color: #5e0e2f;
+    color: #ffffff;
     text-align: center;
+    
 }
 
 .div-title{
-    background-color:#e7b836; /* Color de fondo para cada salón */
-    border: 1px solid #8f6f18; /* Ancho, estilo y color del borde */
-    box-shadow: 0px 0px 20px rgba(107, 6, 61, 0.5); /* Sombra */
-    border-radius: 10px; /* Bordes redondeados */
-    margin-bottom: 40px;
+    background-color: #490815;
+    padding: 10px;
+    border: 1px solid #7c515e;
+    box-shadow: 0px 0px 20px rgb(78, 10, 33);
+    border-radius: 10px;
+    margin-bottom: 5px;
     text-align: center;
+    width: 100%; /* Ancho completo del container */
+    margin: 10px;
 
 }
 
@@ -34,33 +38,47 @@ h1 {
 .ubicacion{
     font-size: 10px;
 }
-.foto{
-    padding: 10px;
-    width: auto; /* Ancho del div */
-    height: 150px; /* Alto del div */
-    text-align: center;
+
+.foto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #ffffff;
 }
+
+.foto-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
 .salon-grid {
     display: flex;
     flex-wrap: wrap; /* Para que los salones se muestren lado a lado */
     gap: 20px; /* Espacio entre los salones */
     justify-content: center; /* Centrar elementos horizontalmente en el grid */
-    margin-bottom: 100px;
 }
 
 .salon-item {
-    background-color:   #b3f0d6; /* Color de fondo para cada salón */
+    background-color: #ffffff; /* Color de fondo para cada salón */
     padding: 20px;
     border: 1px solid #ddd; /* Borde alrededor de cada salón */
-    width: 300px; /* Ancho de cada salón para que haya tres por fila */
-    height: 250px;
+    width: calc(40.33% - 5px); /* Ancho de cada salón para que haya tres por fila */
     border-radius: 5px; /* Bordes redondeados */
     box-sizing: border-box;
-    box-shadow: 10px 10px 10px rgba(165, 11, 96, 0.596); /* Sombra */
+    align-items: center;
+    text-align: center;
+    align-self: flex-end;
 }
 
 .salon-details {
-    font-size: 14px; /* Tamaño de fuente más pequeño para la información */
-    text-align: center; /* Centrar el texto dentro de cada div de detalles */
+ 
+    display: flex;
+    flex-direction: column; /* Alinea los elementos verticalmente */
+    align-items: center;
+    text-align: center;
+}
+.nombre-salon{
+    font-family: 'Boogaloo', sans-serif;
 }

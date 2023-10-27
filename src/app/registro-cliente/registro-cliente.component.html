@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Boogaloo&family=El+Messiri&family=Pacifico&display=swap" rel="stylesheet">
+  
+</head>
+<body>
+  
+<form >
+  <div><h2>Registrate para Reservar Salones</h2></div>
+    <div>
+      <label for="idUsuario">ID de Usuario</label>
+      <input type="text" class="form-control" name="idUsuario" [(ngModel)]="cliente.idUsuario" required>
+    </div>
+  
+    <div>
+      <label for="contrasena">Contraseña</label>
+      <input type="password" class="form-control" name="contrasena" [(ngModel)]="cliente.contrasena" required>
+    </div>
+  
+    <div>
+      <label for="email">Email</label>
+      <input type="email" class="form-control" name="email" [(ngModel)]="cliente.email" required>
+    </div>
+  
+    <div>
+      <label for="nombre">Nombre</label>
+      <input type="text" class="form-control" name="nombre" [(ngModel)]="cliente.nombre" required>
+    </div>
+  
+    <div>
+      <label for="telefono">Teléfono</label>
+      <input type="text" class="form-control" name="telefono" [(ngModel)]="cliente.telefono">
+    </div>
+  
+    <div>
+      <label for="fechaNacimiento">Fecha de Nacimiento</label>
+      <input type="date" class="form-control" name="fechaNacimiento" [(ngModel)]="cliente.fechaNacimiento">
+    </div>
+  
+    <div>
+      <label for="direccion">Dirección</label>
+      <textarea class="form-control" name="direccion" [(ngModel)]="cliente.direccion"></textarea>
+    </div>
+  
+    <button type="submit" (click)="createCliente()">Registrar</button>
+    <button type="login" (click)="backLogin()">Login</button>
+  </form>
+  
+</body>
+</html>
+

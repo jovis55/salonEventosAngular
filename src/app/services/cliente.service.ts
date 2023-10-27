@@ -9,11 +9,16 @@ import { Cliente } from '../models/cliente';
 export class ClienteService {
 
   private url:string="http://localhost:8080/clientes"
+  
   constructor(private http:HttpClient) { 
   }
 
   getUsuario(idUsuario:string):Observable<Cliente>{
     return this.http.get<Cliente>(this.url+"/"+idUsuario);
+  }
+
+  createUsuario(cliente: Cliente): Observable<Cliente> {
+    return this.http.post<Cliente>(this.url, cliente);
   }
 
 }

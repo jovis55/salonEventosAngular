@@ -29,9 +29,11 @@ export class SalonesDuenioComponent {
 
   }
   navegarASalonesForm() {
-    this.router.navigate(['duenios','12334','salones', 'form']);
+    this.router.navigate(['duenios',this.duenio.idUsuario,'salones', 'formRegistro']);
   }
-
+  navigateToDetails(idSalon: number) {
+    this.router.navigate(['duenios',this.duenio.idUsuario,'salones', idSalon]);
+  }
   cargar(initialId): void {
     let idUsuario = initialId;
     if (idUsuario) {
