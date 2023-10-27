@@ -64,6 +64,10 @@ export class UsuarioLoginComponent {
 
           console.log('Usuario no encontrado. Por favor, regístrate.');
         }
+      },(error) => {
+        // En caso de un error al obtener el usuario, maneja el error aquí.
+        console.error('Error al obtener el usuario:', error);
+        this.mostrarMensajeError('Error al autenticar. Por favor, intenta nuevamente más tarde.');
       }
     );
   }
@@ -80,7 +84,7 @@ export class UsuarioLoginComponent {
 
   mostrarMensajeError(mensaje: string) {
     this.snackBar.open(mensaje, 'Cerrar', {
-      duration: 3000, // Duración del mensaje en milisegundos
+      duration: 5000, // Duración del mensaje en milisegundos
       verticalPosition: 'top' as MatSnackBarVerticalPosition, // Establece la posición en la parte superior
     });
   }

@@ -80,7 +80,9 @@ const routes:Routes=[
     path: 'duenios/:id', component: DuenioComponent,
     children: [
       { path: 'salones', component: SalonesDuenioComponent },
-      { path: 'salones/form', component: RegistroSalonesComponent },
+      
+      { path: 'salones/formRegistro', component: RegistroSalonesComponent },
+      { path: 'salones/:idSalon', component: SalonDetallesComponent },
       // Otras rutas secundarias dentro de 'duenios' 
     ],
   }

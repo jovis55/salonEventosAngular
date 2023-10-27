@@ -11,6 +11,7 @@
 .tit-salones{
     color: #ffffff;
     text-align: center;
+    
 }
 
 .div-title{
@@ -63,7 +64,7 @@ h1 {
     background-color: #ffffff; /* Color de fondo para cada salón */
     padding: 20px;
     border: 1px solid #ddd; /* Borde alrededor de cada salón */
-    width: calc(33.33% - 20px); /* Ancho de cada salón para que haya tres por fila */
+    width: calc(40.33% - 5px); /* Ancho de cada salón para que haya tres por fila */
     border-radius: 5px; /* Bordes redondeados */
     box-sizing: border-box;
     align-items: center;
@@ -72,7 +73,7 @@ h1 {
 }
 
 .salon-details {
-    font-size: 14px;
+ 
     display: flex;
     flex-direction: column; /* Alinea los elementos verticalmente */
     align-items: center;

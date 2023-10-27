@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -69,6 +69,6 @@ a:hover {
 
 body{
     
-    background: url('https://64.media.tumblr.com/6d15bfb8ea0102e96846046cf314ab70/tumblr_pvnwexJg3L1uzwgsuo1_400.gif') center center;
-    background-size: cover;
+   background: url('https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExazA5Mjg4Mzlmb2ZjaWpnYmhpdTN4Y2p3MDhta3duaTN2bGUyYml1byZlcD12MV9naWZzX3NlYXJjaCZjdD1n/dYtHPYJxZblCcWPwcQ/giphy.gif');
+background-size: cover;
 }

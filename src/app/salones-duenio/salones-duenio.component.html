@@ -30,12 +30,15 @@
             
           </div>
           <h2 class="nombre-salon"> {{ salon.nombre }}</h2>
+          <div (click)="navigateToDetails(salon.idSalon)" style="cursor: pointer"><i class="fa-solid fa-eye fa-xl" style="color: #78123e;"  ></i>
         </div>
+        </div>
+        
         
       </div>
     </div>
   </div>
-
+  <div><router-outlet></router-outlet></div>
   </body>
   </html>
   

@@ -1,0 +1,72 @@
+.container {
+   max-width: 400px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #ffffff;
+    flex: auto;
+  }
+  
+  h2 {
+ 
+    color: #333;
+    margin-top: 10px;
+    font-family: 'Poltawski Nowy', serif;
+    font-size: 32px;
+  }
+  
+  p {
+    font-size: 16px;
+    color: #57183b;
+  }
+  
+  .form-group {
+    margin: 20px 0;
+  }
+  
+  label {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+    font-family: 'El Messiri', sans-serif;
+
+    
+  }
+  
+  .form-check-label {
+   margin-right: 90px;
+  }
+  
+  .form-check-input {
+    margin-left: 100px;
+    border: 1px solid #3f0370;
+
+  }
+  
+  .btn-primary {
+    background-color: #8400ff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .btn-primary:hover {
+    background-color: #7a00b3;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url('https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExazA5Mjg4Mzlmb2ZjaWpnYmhpdTN4Y2p3MDhta3duaTN2bGUyYml1byZlcD12MV9naWZzX3NlYXJjaCZjdD1n/dYtHPYJxZblCcWPwcQ/giphy.gif');
+    background-size: cover;
+}
+  
+
