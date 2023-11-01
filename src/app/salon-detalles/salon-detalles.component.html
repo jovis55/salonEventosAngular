@@ -11,13 +11,13 @@
 </head>
 <body>
     <h1>Detalles del salon</h1>
-    <table>
-        <tr>
-            <td>ID del Salón:</td>
+    <table *ngIf="salon">
+        <tr >
+            <td >ID del Salón:</td>
             <td>{{salon.idSalon }}</td>
         </tr>
         <tr>
-            <td>Nombre:</td>
+            <td >Nombre:</td>
             <td>{{salon.nombre }}</td>
         </tr>
         <tr>
@@ -41,17 +41,18 @@
             <td>Servicio Incluido:</td>
             <td>{{ salon.servicioIncluido }}</td>
         </tr>
+      
         <tr>
             <td>Dueño:</td>
-            <td>{{ salon.duenio.nombre}}</td>
+            <td>{{duenio.nombre}}</td>
         </tr>
         <tr>
             <td>Tel Dueño:</td>
-            <td>{{ salon.duenio.telefono}}</td>
+            <td>{{ duenio.telefono}}</td>
         </tr>
         <tr>
             <td>Email Dueño:</td>
-            <td>{{ salon.duenio.email}}</td>
+            <td>{{ duenio.email}}</td>
         </tr>
     </table>
 </body>

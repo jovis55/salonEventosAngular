@@ -7,6 +7,7 @@
     align-items: center; /* Centrar elementos horizontalmente en el contenedor */
     height: auto;
     width: auto;
+    margin-bottom: 70px;
 }
 .tit-salones{
     color: #ffffff;
@@ -24,6 +25,7 @@
     text-align: center;
     width: 100%; /* Ancho completo del container */
     margin: 10px;
+    height: 55px;
 
 }
 
@@ -82,3 +84,48 @@ h1 {
 .nombre-salon{
     font-family: 'Boogaloo', sans-serif;
 }
+/* Estilos para alinear elementos en una fila */
+/* Estilos para alinear elementos en una fila */
+/* Estilos para el contenedor del formulario */
+.container {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Estilos para los elementos del formulario */
+  .form-label {
+    font-weight: bold;
+    
+    
+  }
+  
+  .form-select, .form-control {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-left: 175px;
+  }
+  
+  .btn-primary {
+    background-color: #a52343;
+    color: #fff;
+    padding-bottom: 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    max-height: 35px;
+    align-content: center;
+    margin-bottom: 20px;
+    max-width: 100px;
+  }
+  
+  /* Estilos para el botón en estado hover */
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+  

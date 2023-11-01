@@ -46,5 +46,8 @@ export class SalonesDuenioComponent {
       )
     }
   }
+  navigateToDisponibilidad(idSalon: number) {
+    this.router.navigate(['duenios',this.duenio.idUsuario, 'salones',idSalon,'dis' ]);
+  }
 
 }

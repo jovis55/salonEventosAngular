@@ -15,7 +15,7 @@
   </head>
   <body>
       <!-- Resto de tu contenido HTML -->
-      <div class="container" style="margin-top: 70px; margin-left: 20px;">
+    <div class="container" style="margin-top: 70px; margin-left: 20px;">
 
     <div >
       <div class="div-title"><h1  class="tit-salones">TUS SALONES</h1></div>
@@ -30,7 +30,11 @@
             
           </div>
           <h2 class="nombre-salon"> {{ salon.nombre }}</h2>
-          <div (click)="navigateToDetails(salon.idSalon)" style="cursor: pointer"><i class="fa-solid fa-eye fa-xl" style="color: #78123e;"  ></i>
+          
+          <div (click)="navigateToDetails(salon.idSalon)" style="cursor: pointer"><i class="fa-solid fa-eye fa-xl" style="color: #5c20a1;"  ></i>
+        <div (click)="navigateToDisponibilidad(salon.idSalon)" style="cursor: pointer; margin-left: 260px;">
+            <i class="fa-solid fa-calendar-check fa-xl" style="color: #270833;"></i>
+          </div>
         </div>
         </div>
         

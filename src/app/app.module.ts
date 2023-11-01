@@ -4,6 +4,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { Routes, RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { FullCalendarModule } from '@fullcalendar/angular';
+
+
+
 
 import { AppComponent } from './app.component';
 import { DuenioComponent } from './duenio/duenio.component';
@@ -17,6 +21,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RegistroClienteComponent } from './registro-cliente/registro-cliente.component';
 import { RegistroDuenioComponent } from './registro-duenio/registro-duenio.component';
 import { TipoUsuarioComponent } from './tipo-usuario/tipo-usuario.component';
+import { CalendarioSalonesComponent } from './calendario-salones/calendario-salones.component';
+import { CalendarioDispoComponent } from './calendario-dispo/calendario-dispo.component';
+
 
 //RUTAS PARA INGRESAR A LA VENTANA DE DUENIO Y SUS OPCIONES
 /** 
@@ -72,6 +79,8 @@ const routes:Routes=[
     children: [
       { path: 'salones', component: SalonesClienteComponent },
       { path: 'salones/:idSalon', component: SalonDetallesComponent },
+      { path: 'salones/:idSalon/dis', component: CalendarioSalonesComponent },
+
       // Otras rutas secundarias dentro de 'clientes' 
     ],
 
@@ -80,9 +89,10 @@ const routes:Routes=[
     path: 'duenios/:id', component: DuenioComponent,
     children: [
       { path: 'salones', component: SalonesDuenioComponent },
-      
-      { path: 'salones/formRegistro', component: RegistroSalonesComponent },
+      { path: 'salones/formRegistro', component: RegistroSalonesComponent},
       { path: 'salones/:idSalon', component: SalonDetallesComponent },
+      { path: 'salones/formRegistro/:idSalon/dispo', component: CalendarioDispoComponent},
+      { path: 'salones/:idSalon/dis', component: CalendarioSalonesComponent },
       // Otras rutas secundarias dentro de 'duenios' 
     ],
   }
@@ -106,7 +116,11 @@ const routes:Routes=[
     RegistroClienteComponent,
     RegistroDuenioComponent,
     TipoUsuarioComponent,
-  
+    CalendarioSalonesComponent,
+    CalendarioDispoComponent,
+
+    
+    
   ],
   imports: [
     BrowserModule,
@@ -115,6 +129,10 @@ const routes:Routes=[
     FormsModule,
     MatSnackBarModule,
     BrowserAnimationsModule,
+    FullCalendarModule
+
+
+    
   ],
   exports: [RouterModule],
   bootstrap: [AppComponent],

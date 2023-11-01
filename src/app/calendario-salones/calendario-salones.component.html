@@ -1,0 +1,14 @@
+<div class="vacio"></div>
+
+
+<div class="mensaje"><h1 class="tit-salones">Dias disponibles para reservar</h1></div><div *ngIf="tipoUsuario=== 'duenios'">
+    <div (click)="navigateToNewDispo(salon.idSalon)" style="cursor: pointer; margin-left: 870px; margin-top: 0px; margin-bottom: 30px; ">
+      <i class="fa-solid fa-pen-to-square fa-2xl" style="color: #7400b3;"></i>
+    </div>
+  </div>
+
+<div class="fondoCa">
+<div class="calendar"><full-calendar [options]="calendarOptions"></full-calendar></div>
+</div>
+
+
