@@ -25,32 +25,7 @@ import { CalendarioSalonesComponent } from './calendario-salones/calendario-salo
 import { CalendarioDispoComponent } from './calendario-dispo/calendario-dispo.component';
 
 
-//RUTAS PARA INGRESAR A LA VENTANA DE DUENIO Y SUS OPCIONES
-/** 
-const routes:Routes=[
-  { path: '', redirectTo: '/duenios', pathMatch: 'full' },
-  {
-    path: 'duenios/:id', component: DuenioComponent,
-    children: [
-      { path: 'salones', component: SalonesDuenioComponent },
-      { path: 'salones/form', component: RegistroSalonesComponent },
-      // Otras rutas secundarias dentro de 'duenios' 
-    ],
-  },
-]
 
-const routes:Routes=[
-  { path: '', redirectTo: '/clientes', pathMatch: 'full' },
-  {
-    path: 'clientes/:id', component: ClienteComponent,
-    children: [
-      { path: 'salones', component: SalonesClienteComponent },
-      { path: 'salones/:idSalon', component: SalonDetallesComponent },
-      // Otras rutas secundarias dentro de 'clientes' 
-    ],
-  },
-]
-*/
 const routes:Routes=[
   { path: '', redirectTo: '/loginUsuario', pathMatch: 'full' },
 

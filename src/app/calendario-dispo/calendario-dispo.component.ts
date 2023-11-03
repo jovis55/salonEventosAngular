@@ -19,11 +19,13 @@ import { forkJoin, Observable } from 'rxjs';
 export class CalendarioDispoComponent {
   salon: Salones = new Salones();
   dispoAnterior:Disponibilidad[];
+  bool1: boolean;
   salonActualizado : Salones = new Salones();
   selectedDates: Date[] = [];
   selectedDatesnteriores: Date[] = [];
   calendar: Calendar;
   num: number = 0;
+  num2: number = 1;
   idSalon: number;
 
 
@@ -35,39 +37,33 @@ export class CalendarioDispoComponent {
       selectable: true,
       plugins: [dayGridPlugin, interactionPlugin],
       events: [],
+      
     });
+  
 
     this.calendar.on('select', (info) => {
-      if (this.num === 0) {
-        this.handleDateSelect(info);
-        this.num = 1;
-      } else {
-        this.handleDateUnselect(info);
-        this.num = 0;
+      const selectedDate = info.start;
+     const existingIndex = this.selectedDates.findIndex(date => date.getTime() === selectedDate.getTime());
+    if ((existingIndex === -1)) {
+      this.bool1 = false
+    }
+    else{
+      this.bool1 = true;
+    }
+      if (this.num === 0 && this.bool1==false) {
+        this.selectedDates.push(selectedDate);
+     
+      } else if(this.num === 0 && this.bool1 == true){
+        this.selectedDates.splice(existingIndex, 1);
       }
+      
     });
 
     this.calendar.render();
   }
 
-  handleDateSelect(info: DateSelectArg) {
-    const selectedDate = info.start;
-    const existingIndex = this.selectedDates.findIndex(date => date.getTime() === selectedDate.getTime());
-  
-    if (existingIndex === -1) {
-      this.selectedDates.push(selectedDate);
-    } else {
-      console.log("La fecha ya ha sido seleccionada.");
-    }
-  }
 
-  handleDateUnselect(info: DateSelectArg) {
-    const unselectedDate = info.start;
-    const index = this.selectedDates.findIndex(date => date.getTime() === unselectedDate.getTime());
-    if (index !== -1) {
-      this.selectedDates.splice(index, 1);
-    }
-  }
+
 
   ngOnInit() {
     const parentParams = this.route.parent.snapshot.params;
