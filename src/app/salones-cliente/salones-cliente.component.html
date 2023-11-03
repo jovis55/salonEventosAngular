@@ -23,6 +23,38 @@
 
     <div >
       <div class="div-title"><h1 class="tit-salones">SALONES DISPONIBLES</h1></div>
+      <div class="container2">
+        <div class="row mt-4">
+          <div class="col-md-4" >
+            <label for="opcionBusqueda" style="margin-left: 0px;">Selecciona una opción de búsqueda:</label>
+            <select class="form-select" id="opcionBusqueda" [(ngModel)]="opcionBusqueda" (change)="seleccionDeOpcion()">
+              <option value="restablecerBusqueda">Restablecer Busqueda</option>
+              <option value="ubicacion">Por Ubicación</option>
+              <option value="capacidad">Por Capacidad</option>
+              <option value="fecha">Por Fecha</option>
+              <!-- Agrega más opciones según tus criterios de búsqueda -->
+            </select>
+          </div>
+          <div *ngIf="opcionBusqueda === 'ubicacion'" class="col-md-4">
+            <label for="ubicacion" style="margin-left: 180px;" >Ubicación:</label>
+            <input type="text" class="form-control" id="ubicacion" [(ngModel)]="ubicacionInput">
+          </div>
+          <div *ngIf="opcionBusqueda === 'capacidad'" class="col-md-4">
+            <label for="capacidad" style="margin-left: 180px;" >Capacidad:</label>
+            <input type="text" class="form-control" id="capacidad" [(ngModel)]="capacidadInput">
+          </div>
+          <div *ngIf="opcionBusqueda === 'fecha'" class="col-md-4">
+            <label for="fecha" style="margin-left: 180px;" >Fecha:</label>
+            <input type="date" class="form-control" id="fecha" [(ngModel)]="fechaInput">
+          </div>
+          
+          <div class="col-md-12 text-center">
+            <button class="btn btn-primary" (click)="buscarSalones()">Buscar</button>
+          </div>
+        </div>
+      </div>
+      
+      
       <div class="salon-grid">
         <div class="salon-item" *ngFor="let salon of salones">
           <div class="salon-details">
@@ -32,13 +64,23 @@
      
             <h2 class="nombre-salon"> {{ salon.nombre }}</h2>
             <h3 class="ubicacion"> {{ salon.ubicacion }}</h3>
-            <div (click)="navigateToDetails(salon.idSalon)" style="cursor: pointer"><i class="fa-solid fa-eye fa-xl" style="color: #78123e;"  ></i>
+            
+              
+              <div (click)="navigateToDetails(salon.idSalon)" style="cursor: pointer;">
+                <i class="fa-solid fa-eye fa-xl" style="color: #78123e;"></i>
+              </div>
+              <div (click)="navigateToDisponibilidad(salon.idSalon)" style="cursor: pointer; margin-left: 350px;">
+                <i class="fa-solid fa-calendar-check fa-xl" style="color: #8E9991;"></i>
+              
+            </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
+
+  <router-outlet></router-outlet>
   </body>
+
   </html>
   

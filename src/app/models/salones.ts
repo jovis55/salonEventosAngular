@@ -1,3 +1,4 @@
+import { Disponibilidad } from "./disponibilidad";
 import { Duenio } from "./duenio";
 
 export class Salones {
@@ -10,5 +11,7 @@ export class Salones {
     servicioIncluido : string;
     imagenUrl: string;
     duenio:Duenio;
+    disponibilidadList: Disponibilidad[];
+
   
 }

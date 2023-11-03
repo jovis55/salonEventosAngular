@@ -1,9 +1,11 @@
 
 .offcanvas {
   background-color: #0C0315;
+  
 }
 .custom-navbar {
     background-color: #48098A; /* Cambia #FF0000 al código de color deseado */
+    max-height: 65px;
   }
 
 .custom-icon {
@@ -18,6 +20,16 @@
   font-size: 22px;
   font-family: 'El Messiri', sans-serif;
   margin-left: auto;
+}
+.logo{
+  margin-top: 16px;
+  margin-left: 10px;
+  font-family: 'El Messiri', sans-serif;
+}
+h1{
+  font-family: 'El Messiri', sans-serif;
+  font-size: 26px;
+  color: #ffffff;
 }
 
 /* Espacio entre el icono y el nombre del usuario */

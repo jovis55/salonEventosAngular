@@ -1,9 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, AfterViewInit } from '@angular/core';
 import { Salones } from '../models/salones';
 import { SalonesService } from '../services/salones.service';
-import { ActivatedRoute, Route, Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Duenio } from '../models/duenio';
 import { DuenioService } from '../services/duenio.service';
+import { Calendar, DateSelectArg, EventClickArg } from '@fullcalendar/core';
+import dayGridPlugin from '@fullcalendar/daygrid';
+import interactionPlugin from '@fullcalendar/interaction';
+import { Disponibilidad } from '../models/disponibilidad';
+import { DisponibilidadService } from '../services/disponibilidad.service';
 
 @Component({
   selector: 'app-registro-salones',
@@ -11,22 +16,24 @@ import { DuenioService } from '../services/duenio.service';
   styleUrls: ['./registro-salones.component.css']
 })
 export class RegistroSalonesComponent {
-  duenio: Duenio;
-  salon: Salones = new Salones;
 
-
+  duenio: Duenio ;
+  salon: Salones = new Salones();
   selectedFile: File | null = null;
-  
 
 
-  constructor(private route: ActivatedRoute,private salonesService:SalonesService, private router:Router, private duenioService:DuenioService){}
+  constructor(private route: ActivatedRoute, private salonesService: SalonesService, private router: Router, private duenioService: DuenioService, private dispoService: DisponibilidadService) {}
 
   ngOnInit(): void{
     const initialId = this.route.snapshot.parent.params['id'];
     this.cargar(initialId);
 
   }
+
   
+  
+
+ 
   create(): void {
     if (this.selectedFile) {
       this.salon.duenio = this.duenio;
@@ -49,34 +56,28 @@ export class RegistroSalonesComponent {
       this.salonesService.createSalon(formData).subscribe(
         (salonCreado) => {
           console.log(formData);
-          this.router.navigate(['duenios', '12334', 'salones']);
+          this.router.navigate(['duenios', this.salon.duenio.idUsuario, 'salones', 'formRegistro', salonCreado.idSalon, 'dispo']);
         },
         (error) => {
           console.error('Error al crear el salón:', error);
         }
       );
      
-      
-      
-      
-      
-      
     
     } else {
         console.error('No se seleccionó ningún archivo.');
       }
     }
   
-    onFileSelected(event: any): void {
-      this.selectedFile = event.target.files[0];
-    }
+    
 
      
-
+  onFileSelected(event: any) {
+    this.selectedFile = event.target.files[0];
+  }
 
   cargar(initialId): void {
-    let idUsuario = initialId;
-    console.log("este es el id registro", initialId);
+    const idUsuario = initialId;
     if (idUsuario) {
       this.duenioService.getUsuario(idUsuario).subscribe(
         (due) => {
@@ -85,7 +86,5 @@ export class RegistroSalonesComponent {
       )
     }
   }
-
-  
 
 }

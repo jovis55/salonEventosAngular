@@ -3,7 +3,8 @@
   }
   .custom-navbar {
       background-color: #A21D4C
-      ; /* Cambia #FF0000 al código de color deseado */
+      ;
+      height: 70px; /* Cambia #FF0000 al código de color deseado */
     }
   
   .custom-icon {

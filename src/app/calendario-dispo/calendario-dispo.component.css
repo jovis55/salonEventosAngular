@@ -1,0 +1,96 @@
+
+/* Estilos para el contenedor principal */
+.fondoCa {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   max-width: 800px;
+   margin: 0 auto;
+   margin-top: 100px;
+   padding: 20px;
+   background-color: hsl(138, 79%, 89%);
+   border: 1px solid #d8bef1;
+   box-shadow: 0px 0px 20px rgba(44, 175, 164, 0.5);
+ }
+ 
+ /* Estilos para el calendario */
+ .calendario {
+   flex: 1;
+   max-width: 470px;
+   max-height: 600px;
+   background-color: rgb(255, 255, 255);
+   border-radius: 10px;
+ }
+ 
+ /* Estilos para la sección de fechas seleccionadas */
+ .fechas-seleccionadas {
+  
+
+   border: 1px solid #d8bef1;
+   border-radius: 10px;
+   max-width: 200px;
+ }
+ 
+ /* Estilos para la tabla de fechas seleccionadas */
+/* Estilos para el contenedor principal */
+
+ 
+ /* Estilos para el calendario */
+
+ 
+ /* Estilos para la sección de fechas seleccionadas */
+
+ /* Estilos para la tabla de fechas seleccionadas */
+ table {
+   width: 50%;
+   border-collapse: collapse;
+ }
+ 
+ table td {
+   
+   border: 1px solid #d8bef1;
+   text-align: center;
+   background-color: #3498db;
+   color: #fff;
+ }
+ 
+ /* Estilos para el botón de guardar */
+ .boton-agregar {
+   background-color: #3498db;
+   color: #fff;
+   border: none;
+   padding: 10px 20px;
+   border-radius: 5px;
+   cursor: pointer;
+ }
+ 
+ .boton-agregar:hover {
+   background-color: #2587c3;
+ }
+ 
+ /* Estilos para el encabezado de fechas seleccionadas */
+ .fechas-seleccionadas h3 {
+   margin-bottom: 10px;
+ }
+ 
+ 
+ /* Estilos para el botón de guardar */
+ .boton-agregar {
+   background-color: #3498db;
+   color: #fff;
+   border: none;
+   padding: 10px 20px;
+   border-radius: 5px;
+   cursor: pointer;
+   margin: auto;
+ }
+ 
+ .boton-agregar:hover {
+   background-color: #2587c3;
+ }
+ 
+ /* Estilos para el encabezado de fechas seleccionadas */
+ .fechas-seleccionadas h3 {
+   margin-bottom: 10px;
+ }
+ 
